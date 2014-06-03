@@ -12,10 +12,10 @@ class Fichas extends CI_Controller {
 		$this->load->library('table');
 		$data['fichas'] = $this->db->get('ficha')->result();
 		$data['alunos'] = $this->db->get('aluno')->result();
-		$this->load->view('administracao/html_header');
-		$this->load->view('administracao/menu');
-		$this->load->view('administracao/fichas',$data);
-		$this->load->view('administracao/html_footer');
+		$this->load->view('administracao/html_header2');
+		$this->load->view('administracao/menu2');
+		$this->load->view('administracao/fichas2',$data);
+		$this->load->view('administracao/html_footer2');
 	}
 	
 	public function salvar_alteracao(){
@@ -68,10 +68,11 @@ class Fichas extends CI_Controller {
 		$this->db->where('id_ficha',$ficha);
 		$data['ficha'] = $this->db->get('ficha')->result();
 		
-		$this->load->view('administracao/html_header');
-		$this->load->view('administracao/menu');
-		$this->load->view('administracao/editar_ficha',$data);
-		$this->load->view('administracao/html_footer');
+		
+		$this->load->view('administracao/html_header2');
+		$this->load->view('administracao/menu2');
+		$this->load->view('administracao/editar_ficha2',$data);
+		$this->load->view('administracao/html_footer2');
 	}
 	
 	public function excluir($id){

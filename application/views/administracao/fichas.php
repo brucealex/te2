@@ -39,7 +39,7 @@
 		echo form_close();
 		//Fim do formulário...
 		
-		echo heading("Receitas Cadastradas " . img(base_url().'assets/imgs/novo.gif'),2,"class='divisor'");
+		echo heading("Fichas Cadastradas " . img(base_url().'assets/imgs/novo.gif'),2,"class='divisor'");
 		
 		//Início da listagem de categorias...
 		$array_receitas = array();

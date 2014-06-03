@@ -11,10 +11,10 @@ class Alunos extends CI_Controller {
 	public function index(){
 		$this->load->library('table');
 		$data['alunos'] = $this->db->get('aluno')->result();
-		$this->load->view('administracao/html_header');
-		$this->load->view('administracao/menu');
-		$this->load->view('administracao/alunos',$data);
-		$this->load->view('administracao/html_footer');
+		$this->load->view('administracao/html_header2');
+		$this->load->view('administracao/menu2');
+		$this->load->view('administracao/alunos2',$data);
+		$this->load->view('administracao/html_footer2');
 	}
 	
 	public function adicionar(){
@@ -37,10 +37,10 @@ class Alunos extends CI_Controller {
 	public function editar($id){
 		$this->db->where('id_aluno',$id);
 		$data['alunos'] = $this->db->get('aluno')->result();
-		$this->load->view('administracao/html_header');
-		$this->load->view('administracao/menu');
-		$this->load->view('administracao/editar_aluno',$data);
-		$this->load->view('administracao/html_footer');
+		$this->load->view('administracao/html_header2');
+		$this->load->view('administracao/menu2');
+		$this->load->view('administracao/editar_aluno2',$data);
+		$this->load->view('administracao/html_footer2');
 	}
 	
 	public function salvar_alteracao(){		

@@ -11,10 +11,10 @@ class Usuarios extends CI_Controller {
 	public function index(){
 		$this->load->library('table');
 		$data['usuarios'] = $this->db->get('usuarios')->result();
-		$this->load->view('administracao/html_header');
-		$this->load->view('administracao/menu');
-		$this->load->view('administracao/usuarios',$data);
-		$this->load->view('administracao/html_footer');
+		$this->load->view('administracao/html_header2');
+		$this->load->view('administracao/menu2');
+		$this->load->view('administracao/usuarios2',$data);
+		$this->load->view('administracao/html_footer2');
 	}
 	
 	public function adicionar(){
@@ -37,10 +37,10 @@ class Usuarios extends CI_Controller {
 	public function editar($id){
 		$this->db->where('id_usuario',$id);
 		$data['usuarios'] = $this->db->get('usuarios')->result();
-		$this->load->view('administracao/html_header');
-		$this->load->view('administracao/menu');
-		$this->load->view('administracao/editar_usuario',$data);
-		$this->load->view('administracao/html_footer');
+		$this->load->view('administracao/html_header2');
+		$this->load->view('administracao/menu2');
+		$this->load->view('administracao/editar_usuario2',$data);
+		$this->load->view('administracao/html_footer2');
 	}
 	
 	public function salvar_alteracao(){		

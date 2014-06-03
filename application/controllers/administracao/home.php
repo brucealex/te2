@@ -6,9 +6,9 @@ class Home extends CI_Controller {
 	}
 	
 	public function index(){
-		$this->load->view('administracao/html_header');
-		$this->load->view('administracao/login');		
-		$this->load->view('administracao/html_footer');
+		$this->load->view('administracao/html_header2');
+		$this->load->view('administracao/login2');		
+		$this->load->view('administracao/html_footer2');
 	}
 	
 	public function login(){		
@@ -24,7 +24,7 @@ class Home extends CI_Controller {
                'logado' => TRUE
             );
 			$this->session->set_userdata($dados);
-			redirect(base_url()."administracao/categorias");
+			redirect(base_url()."administracao/alunos");
 		}
 		else{
 			redirect(base_url()."administracao/home/index");
